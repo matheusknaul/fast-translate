@@ -50,11 +50,30 @@ class Janela(QMainWindow):
             'QPushButton {background-color:#43D3E8; font:bold}')
         botaoGravarLista.clicked.connect(self.gravaTraducao)
 
+        botaoExibirLista = QPushButton('Exibir', self)
+        botaoExibirLista.move(675, 150)
+        botaoExibirLista.resize(40, 25)
+        botaoExibirLista.setStyleSheet(
+            'QPushButton {background-color:#43D3E8; font:bold}')
+        botaoExibirLista.clicked.connect(self.gravaTraducao)
+
         self.label_1 = QLabel(self)
         self.label_1.setText("Coloque no campo o que você precisa traduzir!")
-        self.label_1.move(400, 175)
+        self.label_1.move(50, 150)
         self.label_1.resize(300, 25)
         self.label_1.setStyleSheet('QLabel {font:bold; font-size:10px}')
+
+        self.label_2 = QLabel(self)
+        self.label_2.setText("Fast Translate")
+        self.label_2.move(400, 10)
+        self.label_2.resize(300, 25)
+        self.label_2.setStyleSheet('QLabel {font:bold; font-size:20px}')
+
+        self.label_3 = QLabel(self)
+        self.label_3.setText("Para exibir sua lista de traduções, clique em exibir!")
+        self.label_3.move(400, 150)
+        self.label_3.resize(300, 25)
+        self.label_3.setStyleSheet('QLabel {font:bold; font-size:10px}')
 
         self.CarregarJanela()
 
